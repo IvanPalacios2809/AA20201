@@ -35,6 +35,7 @@ public class AA20201 {
             tiempos[j] = (int) b.gettTotal();
             //System.out.println("j= "+j+" :"+tiempos[j]);
         }  
+        //TODO 
         System.out.println();
         Grafica g1 = new Grafica("N","Tiempo","Tiempos");
         g1.agregarSerie("t1",tiempos);
