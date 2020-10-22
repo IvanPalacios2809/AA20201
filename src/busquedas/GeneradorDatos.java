@@ -57,4 +57,32 @@ public class GeneradorDatos {
         
        return arreglo;
     }
+    public static int[] generarPeorCasoOrdenamiento(int n){
+        int[] arreglo= new int[n];
+        int y=arreglo.length;
+        for(int i=0;i<arreglo.length;i++){
+            arreglo[i]=y;
+            y--;
+                }
+     return arreglo;
+    }
+    public static int[] generarMejorCasoOrdenamiento(int n){
+        int[] arreglo= new int[n];
+        int y=0;
+        for(int i=0;i<arreglo.length;i++){
+            arreglo[i]=y;
+            y++;
+                }
+     return arreglo;
+     
+    }
+    public static int[] generarCasoMedioOrdenamiento(int n){
+        int[] arreglo= new int[n];
+        int y=arreglo.length;
+        for(int i=0;i<arreglo.length;i++){
+            arreglo[i]=y;
+            y--;
+                }
+     return arreglo;
+    }
 }
