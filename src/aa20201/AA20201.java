@@ -42,6 +42,7 @@ public class AA20201 {
         g1.agregarSerie("t1",tiempos);
         g1.crearGrafica();
         g1.muestraGrafica();
+        
        
        
     }

@@ -76,13 +76,14 @@ public class GeneradorDatos {
      return arreglo;
      
     }
-    public static int[] generarCasoMedioOrdenamiento(int n){
-        int[] arreglo= new int[n];
-        int y=arreglo.length;
-        for(int i=0;i<arreglo.length;i++){
-            arreglo[i]=y;
-            y--;
-                }
-     return arreglo;
+    public static int[] generarCasoMedioOrdenamiento(int n, int bound){
+        int[] arreglo = new int[n];
+        Random ran = new Random();
+     
+        for(int y=0; y < n; y++){   
+            arreglo[y] = ran.nextInt();
+        }
+        
+       return arreglo;
     }
 }
