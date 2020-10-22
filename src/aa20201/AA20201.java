@@ -9,6 +9,7 @@ import aa20201.data.Grafica;
 import busquedas.BusquedaSecuencial;
 import busquedas.Busquedas;
 import busquedas.GeneradorDatos;
+import jdk.nashorn.internal.ir.Module.ImportEntry;
 import ordenamiento.Burbuja;
 
 /**
@@ -16,7 +17,7 @@ import ordenamiento.Burbuja;
  * @author working
  */
 public class AA20201 {
-
+    ImportEntry
     /**
      * @param args the command line arguments
      */
