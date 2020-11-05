@@ -5,9 +5,15 @@
  */
 package aa20201.data;
 
+import java.awt.BasicStroke;
+import static java.awt.Color.BLACK;
+import static java.awt.Color.BLUE;
+import static java.awt.Color.RED;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.xy.XYDataItem;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
@@ -56,6 +62,14 @@ public class Grafica {
     }
     public void crearGrafica(){
         this.grafica = ChartFactory.createXYAreaChart(titulo, ejeX, ejeY, series);
+        XYPlot plot=this.grafica.getXYPlot();
+        XYLineAndShapeRenderer render=new XYLineAndShapeRenderer();
+        render.setSeriesPaint(0, RED);
+        render.setSeriesPaint(0, BLUE);
+        render.setSeriesPaint(0, BLACK);
+        render.setSeriesStroke(0, new BasicStroke(1.0f));
+        render.setSeriesStroke(0, new BasicStroke(1.0f));
+        render.setSeriesStroke(0, new BasicStroke(1.0f));
     }
     
      public void muestraGrafica(){

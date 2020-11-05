@@ -63,6 +63,7 @@ public class GeneradorDatos {
         for(int i=0;i<arreglo.length;i++){
             arreglo[i]=y;
             y--;
+            System.out.print(arreglo[i]);
                 }
      return arreglo;
     }
@@ -72,6 +73,7 @@ public class GeneradorDatos {
         for(int i=0;i<arreglo.length;i++){
             arreglo[i]=y;
             y++;
+            System.out.print(arreglo[i]);
                 }
      return arreglo;
      
