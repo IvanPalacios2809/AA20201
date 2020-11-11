@@ -14,10 +14,10 @@ public class Merge {
     public long tFinal;
     public long tTotal;
 
-    public Merge(long tInicio, long tFinal, long tTotal) {
-        this.tInicio = tInicio;
-        this.tFinal = tFinal;
-        this.tTotal = tTotal;
+    public Merge() {
+        this.tInicio = 0;
+        this.tFinal = 0;
+        this.tTotal = 0;
     }
 
     public long gettInicio() {
@@ -81,4 +81,12 @@ public class Merge {
     }
     
 }
+  
+  public void ordenar(int[] arreglo, int tamano){
+      this.tInicio=System.currentTimeMillis();
+      mergeSort(arreglo,arreglo.length);
+      this.tFinal=System.currentTimeMillis();
+      this.tTotal=this.tFinal-this.tInicio;
+      
+  }
 }

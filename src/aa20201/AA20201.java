@@ -12,6 +12,8 @@ import busquedas.GeneradorDatos;
 import jdk.nashorn.internal.ir.Module.ImportEntry;
 import ordenamiento.Burbuja;
 import ordenamiento.Fibonacci;
+import ordenamiento.Insert;
+import ordenamiento.Merge;
 
 /**
  *
@@ -30,27 +32,34 @@ public class AA20201 {
         double[] tiempos1 = new double[n];
         double[] tiempos2 = new double[n];
         double[] tiempos3 = new double[n];
-        Burbuja b = new Burbuja();
-        Burbuja a = new Burbuja();
-        Burbuja c = new Burbuja();
-        Fibonacci f=new Fibonacci();
-        Fibonacci f2=new Fibonacci();
-        // complejidad algoritmica Sumatoria ( Generar los datos aleatorios + busqueda + almacenar el tiempo)
+        Burbuja burbuja = new Burbuja();
+        Insert insert = new Insert();
+        Merge mergesort = new Merge();
+
+        // complejidad algoritmica Sumatoria ( Generar los datos aleatorios + busqueda + almacenar el tiempo) 
         for (int j = 0; j < n; j++){
-            f.llamar_recursivo(j);
-            tiempos1[j] = (int) f.gettTotal();
-            System.out.println("j= "+j+" :"+tiempos1[j]);
+            aux1=GeneradorDatos.generarArregloInt(j, n);
+            burbuja.ordenar(aux1);
+            tiempos1[j] = (int) burbuja.gettTotal();
+            System.out.println("j2= "+j+" :"+tiempos1[j]);
         }  
-        
         for (int j = 0; j < n; j++){
-            f2.llamar_secuencial(j);
-            tiempos2[j] = (int) f.gettTotal();
+            aux2=GeneradorDatos.generarArregloInt(j, n);
+            insert.ordenar(aux2);
+            tiempos2[j] = (int) burbuja.gettTotal();
             System.out.println("j2= "+j+" :"+tiempos2[j]);
+        }  
+        for (int j = 0; j < n; j++){
+            aux3=GeneradorDatos.generarArregloInt(j, n);
+            mergesort.ordenar(aux3,aux3.length);
+            tiempos3[j] = (int) mergesort.gettTotal();
+            System.out.println("j2= "+j+" :"+tiempos3[j]);
         }  
         System.out.println();
         Grafica g1 = new Grafica("N","Tiempo","Tiempos");
-        g1.agregarSerie("Recursivo",tiempos1);
-        g1.agregarSerie("Secuencial",tiempos2);
+        g1.agregarSerie("Bubble sort",tiempos1);
+        g1.agregarSerie("Insert sort",tiempos2);
+        g1.agregarSerie("Merge sort",tiempos3);
         g1.crearGrafica();
         g1.muestraGrafica();
        
