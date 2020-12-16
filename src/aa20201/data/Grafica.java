@@ -8,6 +8,7 @@ package aa20201.data;
 import java.awt.BasicStroke;
 import static java.awt.Color.BLACK;
 import static java.awt.Color.BLUE;
+import static java.awt.Color.GREEN;
 import static java.awt.Color.RED;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
@@ -65,11 +66,14 @@ public class Grafica {
         XYPlot plot=this.grafica.getXYPlot();
         XYLineAndShapeRenderer render=new XYLineAndShapeRenderer();
         render.setSeriesPaint(0, RED);
-        render.setSeriesPaint(0, BLUE);
-        render.setSeriesPaint(0, BLACK);
+        render.setSeriesPaint(1, BLUE);
+        render.setSeriesPaint(2, BLACK);
+        
         render.setSeriesStroke(0, new BasicStroke(1.0f));
-        render.setSeriesStroke(0, new BasicStroke(1.0f));
-        render.setSeriesStroke(0, new BasicStroke(1.0f));
+        render.setSeriesStroke(1, new BasicStroke(1.0f));
+        render.setSeriesStroke(2, new BasicStroke(1.0f));
+       
+        plot.setRenderer(render);
     }
     
      public void muestraGrafica(){

@@ -63,7 +63,7 @@ public class GeneradorDatos {
         for(int i=0;i<arreglo.length;i++){
             arreglo[i]=y;
             y--;
-            System.out.print(arreglo[i]);
+            
                 }
      return arreglo;
     }
@@ -73,7 +73,6 @@ public class GeneradorDatos {
         for(int i=0;i<arreglo.length;i++){
             arreglo[i]=y;
             y++;
-            System.out.print(arreglo[i]);
                 }
      return arreglo;
      
@@ -83,7 +82,7 @@ public class GeneradorDatos {
         Random ran = new Random();
      
         for(int y=0; y < n; y++){   
-            arreglo[y] = ran.nextInt();
+            arreglo[y] = ran.nextInt(bound);
         }
         
        return arreglo;
